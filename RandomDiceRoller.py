@@ -1,5 +1,3 @@
-#Allyssa Dalton
-#Date Started 09-15-2021
 
 '''
 Random Dice Roller
@@ -7,7 +5,7 @@ Random Dice Roller
 
 #creates empty val 
 #imports random for random num gen
-es=" "
+es=""
 import random 
 
 #asks for the amount of dice & how many sides
@@ -18,10 +16,13 @@ aot=int(input("How many times would you like to roll the dice? "))
 #creates loops for # of dice & times
 #prints sequence of numbers in order rolled
 for i in range(aot):
-  for i in range(aod):
+  for j in range(aod):
     random.randrange(1,aos)
     num=random.randrange(1,aos)
     num=str(num)
-    es=es+num+","+" "
+    if i == aot-1 and j == aod-1:
+        es = es + num
+    else:
+        es=es+num+","+" "
 print("Every number rolled in order:")
 print(es)
